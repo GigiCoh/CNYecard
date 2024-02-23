@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Gong Xi Fa Cai</title>
+    <link rel="stylesheet" href="index.css">
+    
+  </head>
+
+  <body>
+    <script>
+      alert("Open the angpao to get the blessing from your family and friends! \n Click anywhere to enjoy the music:)");
+    </script>
+ 
+    <audio id="player" autoplay loop>
+      <source src="audio/newyear.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="flexcontainer">
+      <div class="angpao">
+        <div class="angpaoBorder">
+          <div class="button" type="button" onclick="toCard();">
+            <button>OPEN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('click', musicPlay);
+      function musicPlay() {
+          document.getElementById('player').play();
+          document.removeEventListener('click', musicPlay);
+      }
+      </script>
+
+    <script>
+      function toCard(){
+        location.replace("card.html");
+      }
+    </script>
+  </body>
+</html>

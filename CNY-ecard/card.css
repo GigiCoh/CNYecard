@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.flexcontainer{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-image: url('images/cardbg.avif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: change 10s infinite ease-in-out;
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  height: 550px;
+  background-image: url('images/CNY-ecard-background2.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 10px 9px #888888;
+  border-radius: 20px;
+  position: absolute;
+  transition: width 1s;
+
+}
+
+.card:hover{
+  width: 70%;
+}
+
+#title{
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: rgb(183, 22, 22);
+  font-family: 'Protest Strike',sans-serif;
+}
+
+#blessing{
+  color: red;
+  font-size: 25px;
+  margin-bottom: 35px;
+  font-family: 'Dancing Script',cursive;
+}
+
+#title:hover{
+  color: black;
+}
+
+#blessing:hover{
+  color: black;
+}
+
+button{
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 20px 15px;
+  font-family: sans-serif;
+  background: linear-gradient(rgb(224, 90, 18),rgb(232, 157, 65));
+  border-radius: 20px;
+  border: none;
+  box-shadow: 5px 6px #888888;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+  transition: width 0.8s;
+  display: block;
+
+}
+
+button:hover{
+  background: linear-gradient(rgb(232, 157, 65),rgb(224, 90, 18));
+  width: 300px;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif{
+  width: 100px;
+  position: absolute;
+  margin-left: 460px;
+  margin-top: 200px;
+}
+
+.gif-mobile{
+  display: none;
+  overflow: hidden;
+  width: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes change{
+  0%
+  {
+    background-image: url(images/cardbg2.jpg);
+  }
+  25%
+  {
+    background-image: url(images/cardbg3.jpg);
+  }
+  50%
+  {
+    background-image: url(images/cardbg.avif);
+  }
+  75%
+  {
+    background-image: url(images/bgcard4.webp);
+  }
+  100%
+  {
+    background-image: url(images/bgcard5.jpg);
+  }
+ 
+}
+
+@media only screen and (max-width:700px) {
+  #title{
+    font-size: 28px;
+  }
+
+  .card{
+    width: 70%;
+    height: 500px;
+    background-image: url('images/bg-white.jpg');
+  }
+
+  button{
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 20px 15px;
+
+  }
+
+  button:hover{
+    background: linear-gradient(rgb(232, 157, 65),rgb(224, 90, 18));
+    width: 220px;
+  }
+
+  .gif-mobile{
+    display: block;
+    width: 50px;
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  #blessing{
+
+    margin-bottom: 15px;
+  }
+
+  .gif{
+    display: none;
+    overflow: hidden;
+  }
+
+  
+}

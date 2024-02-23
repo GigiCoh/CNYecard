@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy Chinese New Year 2024</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="card.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Protest+Strike&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <audio id="player" autoplay loop>
+      <source src="images/audioCard.mp3" type="audio/mp3">
+    </audio>
+
+
+    <div class="flexcontainer">
+      
+      <div class="card">
+        <h1 id="title">Happy Chinese New Year 2024</h1>
+        <h3 id="blessing">Wishing you all the best!</h3>
+        <img class="gif-mobile" src="images/bomb-gif.gif" alt="">
+
+        <div class="button">
+          <button type="button" onclick="toForm();">Share CNY card via WhatsApp</button>
+        </div>
+        <img class="gif" src="images/bomb-gif.gif" alt="">
+
+      </div>
+    </div>
+
+    <script>
+      function toForm(){
+        location.replace("form.html");
+      }
+    </script>
+
+    <script>
+      document.addEventListener('click', musicPlay);
+      function musicPlay() {
+          document.getElementById('player').play();
+          document.removeEventListener('click', musicPlay);
+      }
+      </script>
+
+  </body>
+  
+</html>
